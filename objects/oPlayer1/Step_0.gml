@@ -5,6 +5,7 @@ key_jump = keyboard_check_pressed(vk_space);
 var move = key_right - key_left;
 hsp = move * walksp;
 
+
 if(place_meeting(x+hsp,y,oWall))
 {
 	while(!place_meeting(x+sign(hsp),y,oWall))
