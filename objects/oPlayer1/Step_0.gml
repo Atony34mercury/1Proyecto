@@ -4,13 +4,13 @@ key_up = keyboard_check(vk_up);
 key_down = keyboard_check(vk_down);
 key_jump = keyboard_check_pressed(vk_space);
 
-
 var move = key_right - key_left;
 hsp = move * walksp;
 
 //Verifica si esta chocando con la escalera y cambia la velocidad
 //Arriba es negativo abajo positivo
 var moveV = key_down - key_up;
+
 if(place_meeting(x,y,oLadder)){
 	vsp = vsp + moveV * laddersp;
 }else{
@@ -34,6 +34,8 @@ if(place_meeting(x + sign(hsp),y,oWall) && !place_meeting(x + sign(hsp),y + 1,oC
 	y++;
 }
 
+#region //Verifica las colisiones para detener 
+
 
 //Verifica si existe algo en direcciones horizontales
 if(place_meeting(x+hsp,y,oWall))
@@ -45,7 +47,6 @@ if(place_meeting(x+hsp,y,oWall))
 	
 	hsp = 0;	
 }
-x = x + hsp;
 
 //Verifica si existe algo en direcciones verticales
 if(place_meeting(x,y+vsp,oWall))
@@ -56,5 +57,8 @@ if(place_meeting(x,y+vsp,oWall))
 	}
 	vsp = 0
 }
+#endregion
 
+//Movimiento del personaje
+x = x + hsp;
 y = y + vsp;
