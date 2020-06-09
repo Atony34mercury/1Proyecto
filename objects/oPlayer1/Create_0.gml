@@ -1,8 +1,7 @@
 /// @ Se inicializan las variable
-hsp = 0;
-vsp = 0;
-grv = 0.1;
 
-walksp = 4;
-laddersp = 0.2;
-jump = 5;
+salto = 5;
+velocidad = 1;
+movimientoX = 0;
+move = 0;
+

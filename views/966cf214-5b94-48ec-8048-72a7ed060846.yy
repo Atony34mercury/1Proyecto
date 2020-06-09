@@ -12,7 +12,7 @@
         "adabbd3c-5019-4652-95f8-ce39d27c5a01"
     ],
     "filterType": "GMSprite",
-    "folderName": "EntradaRoom",
+    "folderName": "PrimerNivel",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
