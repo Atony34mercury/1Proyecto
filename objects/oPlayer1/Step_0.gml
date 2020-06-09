@@ -6,6 +6,7 @@ key_space = keyboard_check_pressed(vk_space);
 //Si tecla Izquierda se presiona mobe es -1
 move = key_right - key_left;
 movimientoX = 0;
+
 #region //Movimiento Horizontal
 
 //Movimiento a la derecha
